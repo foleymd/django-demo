@@ -14,7 +14,7 @@ class Story(models.Model):
     published_date = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated_date = models.DateTimeField(auto_now=True, auto_now_add=False)
     text = models.TextField()
-    slug = models.SlugField(default="slug placeholder")
+    slug = models.SlugField()
 
     def __str__(self):
         return self.slug
