@@ -22,7 +22,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('moneytracker/', include('moneytracker.urls')),
-    path('', RedirectView.as_view(url='moneytracker/')),
+    path('api', include('myapi.urls')),
+    path('', RedirectView.as_view(url='admin/')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
