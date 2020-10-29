@@ -22,8 +22,12 @@ def plotly(request):
         x_data.append(month + ' ' + year)
         y_data.append(person_month.investments)
 
-    plot_div = plot([Scatter(x=x_data, y=y_data,
-                        mode='lines', name='test',
-                        opacity=0.8, marker_color='green')],
-               output_type='div')
+    plot_div = plot([Scatter(x=x_data,
+                             y=y_data,
+                             mode='lines',
+                             name='test',
+                             opacity=0.8,
+                             marker_color='green')],
+                             output_type='div')
+                             
     return render(request, "plotly.html", context={'plot_div': plot_div})
