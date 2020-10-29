@@ -62,7 +62,11 @@ ROOT_URLCONF = 'emdash.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                 os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'dashboard', 'templates', 'dashboard'),
+                 os.path.join(BASE_DIR, 'moneytracker', 'templates', 'moneytracker')
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
