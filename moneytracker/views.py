@@ -6,13 +6,13 @@ from moneytracker.models import PersonMonth
 
 class HomePageView(TemplateView):
 
-    template_name = "index.html"
+    template_name = "moneytracker.html"
 
     def get_context_data(self, **kwargs):
         context = {}
         return context
 
-def plotly(request):
+def investments(request):
     person_months= PersonMonth.objects.all()
     x_data = []
     y_data = []
@@ -29,5 +29,5 @@ def plotly(request):
                              opacity=0.8,
                              marker_color='green')],
                              output_type='div')
-                             
-    return render(request, "plotly.html", context={'plot_div': plot_div})
+
+    return render(request, "investments.html", context={'plot_div': plot_div})

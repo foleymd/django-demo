@@ -24,7 +24,9 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('moneytracker/', include('moneytracker.urls')),
     path('api', include('myapi.urls')),
+    path('library/', include('library.urls')),
     path('', RedirectView.as_view(url='dashboard/')),
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

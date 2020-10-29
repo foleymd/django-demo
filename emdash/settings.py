@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'myapi',
     'rest_framework',
     'dashboard',
+    'library',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +66,8 @@ TEMPLATES = [
         'DIRS': [
                  os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'dashboard', 'templates', 'dashboard'),
-                 os.path.join(BASE_DIR, 'moneytracker', 'templates', 'moneytracker')
+                 os.path.join(BASE_DIR, 'moneytracker', 'templates', 'moneytracker'),
+                 os.path.join(BASE_DIR, 'library', 'templates', 'library')
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -75,6 +77,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': ['django.templatetags.static'],
+
         },
     },
 ]
@@ -131,7 +135,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
@@ -143,3 +147,7 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 INTERNAL_IPS = ('127.0.0.1',)
+
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

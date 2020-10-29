@@ -3,6 +3,6 @@ from . import views
 from moneytracker.views import HomePageView
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='index'),
-    path('plotly', views.plotly, name='plotly'),
+    path('', HomePageView.as_view(), name='moneytracker'),
+    path('investments', views.investments, name='investments'),
 ]
