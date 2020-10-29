@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'debug_toolbar',
     'moneytracker',
-    'myapi.apps.MyapiConfig',
+    'myapi',
     'rest_framework',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
