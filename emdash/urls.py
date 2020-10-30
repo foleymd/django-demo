@@ -25,6 +25,7 @@ urlpatterns = [
     path('moneytracker/', include('moneytracker.urls')),
     path('api', include('myapi.urls')),
     path('library/', include('library.urls')),
+    path('weather/', include('weather.urls')),
     path('', RedirectView.as_view(url='dashboard/')),
     path('accounts/', include('django.contrib.auth.urls')),
 

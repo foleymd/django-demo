@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'dashboard',
     'library',
+    'weather',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,8 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'dashboard', 'templates', 'dashboard'),
                  os.path.join(BASE_DIR, 'moneytracker', 'templates', 'moneytracker'),
-                 os.path.join(BASE_DIR, 'library', 'templates', 'library')
+                 os.path.join(BASE_DIR, 'library', 'templates', 'library'),
+                 os.path.join(BASE_DIR, 'weather', 'templates', 'weather'),
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
