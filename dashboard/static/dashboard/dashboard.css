@@ -1,3 +1,41 @@
-li, a, p, h1, h2, h3 {
-    color: green;
+/* color set: #642694, #268594, #2d2894*/
+
+h1, h2, h3 {
+    color: #2d2894;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color:#030142;
+  border-color: #030142;
+}
+
+.btn-primary:hover, .btn-sm:hover  {
+  color: #030142;
+  background-color: #fff;
+  border-color: #030142;
+}
+
+.btn-secondary, .btn-sm {
+  color: #420075;
+  background-color: #fff;
+  border-color: #420075;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #420075;
+  border-color: #fff;
+}
+
+.jumbotron {
+  background-color: #e1f6fa;
+}
+
+.lead {
+  color: #030142;
+}
+
+.bg-dark {
+    background-color: #030142!important;
 }
